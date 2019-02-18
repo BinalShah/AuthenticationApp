@@ -1,0 +1,35 @@
+﻿@model IEnumerable<AuthenticationApp.Models.Student>
+
+<div>
+    <table>
+        <tr>
+            <th></th>
+            <th>
+                First Name
+            </th>
+            <th>
+                Last Name
+            </th>
+            <th>
+                Grade
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Grade)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
